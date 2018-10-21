@@ -31,7 +31,7 @@ p1{
 
 /* ---------------------------------------------------------- */
 
-#Obi,#Vader,#Leia,#Yoda{
+#Capt,#IronMan,#Thor,#Hulk{
 
 
   width: 320px;
@@ -58,25 +58,25 @@ background-repeat:no-repeat;
   background-size: contain;
 }
 
-#Leia{
+#Thor{
   background-image:url('../images/thor.png');
   background-repeat:no-repeat;
     background-size: contain;
 }
 
-#Vader{
+#IronMan{
   background-image:url('../images/ironman.png');
   background-repeat:no-repeat;
     background-size: contain;
 }
 
-#Yoda{
+#Hulk{
   background-image:url('../images/hulk.png');
   background-repeat:no-repeat;
     background-size: contain;
 }
 
-#Obi{
+#Capt{
   background-image:url('../images/CaptAmerica.png');
   background-repeat:no-repeat;
     background-size: contain;
@@ -227,5 +227,9 @@ margin: auto;
 
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+}
+
+#message{
   text-align: center;
 }
