@@ -99,6 +99,8 @@ var Avengers = {
 
       $("#Hulk").click(function(){
 
+
+            $("#message").html("You have chosen The Incredible Hulk!");
             HulkSound.play();
             $("#chosen").data(Hulk);
             //$("#chosen").append(Hulk.name + "<br />" + Hulk.health + " " + Hulk.baseAttack + " " + Hulk.enemyAttackBack+ "<br />" );
@@ -156,7 +158,7 @@ var Avengers = {
 
         $("#Thor").click(function(){
 
-
+                 $("#message").html("You have chosen The Mighty Thor!");
                ThorSound.play();
                 $("#chosen").data(Thor);
             //  $("#chosen").append(Thor.name + "<br />" + Thor.health + " " + Thor.baseAttack + " " + Thor.enemyAttackBack+ "<br />" );
@@ -210,7 +212,7 @@ var Avengers = {
        //---------------------------------------------------------------------------
           $("#IronMan").click(function(){
 
-
+                 $("#message").html("You have chosen The Billionaire Playboy Philantropist!");
                  IronManSound.play();
                 $("#chosen").data(IronMan);
 
@@ -268,7 +270,7 @@ var Avengers = {
             $("#Capt").click(function(){
 
 
-
+                 $("#message").html("You have chosen Captain America!");
                   $("#chosen").data(CaptAmerica);
                    Capt.play();
                 //  $("#chosen").append(CaptAmerica.name + "<br />" + CaptAmerica.health + " " + CaptAmerica.baseAttack + " " + CaptAmerica.enemyAttackBack+ "<br />" );
@@ -417,6 +419,7 @@ var Avengers = {
          }
 
          else if(hpBar <= 0){
+                //$("#message").html("You Lost!");
            confirm("Oh No!You Lost! Play Again?");
            if(confirm){
              location.reload();}
@@ -485,27 +488,28 @@ var Avengers = {
           }
 
 
-          $("#splash").hover(function(){
-$(this).css("background-image", "url('assets/images/splash2.png')");
-}, function(){
-$(this).css("background-image", "url('assets/images/splash1.png')");
+$("#splash").hover(function(){
+      $(this).css("background-image", "url('assets/images/splash2.png')");
+      }, function(){
+      $(this).css("background-image", "url('assets/images/splash1.png')");
+      });
+
+      $("#splash").click(function(){
+      vid.play();
+      setTimeout(function(){ pauseVid();
+      }, 1000);
+      $("#wrapper").css("visibility","visible");
+      $("#myVideo").css("visibility","visible");
+      $("#splash").css("visibility","hidden");
+      $("#message").css("visibility","visible");
+      $("#vidMessage").css("visibility","visible");
 });
 
-$("#splash").click(function(){
-//vid.play();
-//setTimeout(function(){ pauseVid();
-//}, 1000);
-$("#wrapper").css("visibility","visible");
-//$("#myVideo").css("visibility","visible");
-$("#splash").css("visibility","hidden");
-$("#message").css("visibility","visible");
-
+function pauseVid(){
+$("#myVideo").click(function(){
+  vid.pause();
+  $("#myVideo").css("display","none");
+  $("#vidMessage").css("display","none");
 });
 
-// function pauseVid(){
-// $("#myVideo").click(function(){
-//   vid.pause();
-//   $("#myVideo").css("display","none");
-// });
-//
-// };
+};
