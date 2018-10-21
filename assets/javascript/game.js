@@ -1,7 +1,7 @@
 
 
 $( document ).ready(function() {
-
+  x.play();
 
 
 
@@ -453,7 +453,7 @@ var Avengers = {
 
           });
 
-    var vid = document.getElementById("avengersVid");
+    var vid = document.getElementById("avengersVid");  // video controls
           function playVid() {
               vid.play();
           }
@@ -461,7 +461,7 @@ var Avengers = {
               vid.pause();
     }
 
-    var x = document.getElementById("avengersThemeSong");
+    var x = document.getElementById("avengersThemeSong");  // audio controls
 
 function playAudio() {
     x.play();
