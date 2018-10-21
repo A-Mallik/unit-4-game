@@ -105,9 +105,9 @@ var swChars = {
             hpBar = $("#chosen").data().health;
             attckPower = $("#chosen").data().baseAttack;
             console.log(hpBar);
-            // $("#enemies1").append(Leia.name + "<br />" + Leia.health + " " + Leia.baseAttack + " " + Leia.enemyAttackBack+ "<br />" );
-            // $("#enemies2").append(Vader.name + "<br />" + Vader.health + " " + Vader.baseAttack + " " + Vader.enemyAttackBack+ "<br />" );
-            // $("#enemies4").append(ObiWan.name + "<br />" + ObiWan.health + " " + ObiWan.baseAttack + " " + ObiWan.enemyAttackBack + "<br />" );
+             $("#enemies1").append(Leia.name + "<br />" + Leia.health + " " + Leia.baseAttack + " " + Leia.enemyAttackBack+ "<br />" );
+            $("#enemies2").append(Vader.name + "<br />" + Vader.health + " " + Vader.baseAttack + " " + Vader.enemyAttackBack+ "<br />" );
+             $("#enemies4").append(ObiWan.name + "<br />" + ObiWan.health + " " + ObiWan.baseAttack + " " + ObiWan.enemyAttackBack + "<br />" );
             $("#attckYoda").css("visibility","hidden");
             Yoda.health = 0;
             //--------------------------
@@ -130,8 +130,10 @@ var swChars = {
 
               $(".enemies").animate({top:"-250px"},1000);
               $("#enemies2").animate({left:"150px"},1000);
-              $("#enemyStats2").animate({left:"720px"},1000);
-              $("#stats").animate({left:"970px"},1000);
+               $("#enemyStats1").animate({left:"720px", top:"500px"},1000);
+               $("#enemyStats2").animate({left:"720px"},1000);
+               $("#enemyStats3").animate({left:"720px"},1000);
+              $("#stats").animate({left:"1370px"},1000);
               //-------------------------------------------------------------
             //-------------------------------------------------------------
             $("#enemies1").css("background-image", "url('assets/images/thor.png')");
@@ -160,10 +162,10 @@ var swChars = {
             $( "#enemies1,#enemies2,#enemies3" ).empty();      // elsewise empties the div
             $("#chosen").append(Yoda.name + "<br />" + Yoda.health + " " + Yoda.baseAttack + " " + Yoda.enemyAttackBack+ "<br />" );    //then appends data
 
-            // $("#enemies1").append(Leia.name + "<br />" + Leia.health + " " + Leia.baseAttack + " " + Leia.enemyAttackBack+ "<br />" );
-            // $("#enemies2").append(Vader.name + "<br />" + Vader.health + " " + Vader.baseAttack + " " + Vader.enemyAttackBack+ "<br />" );
+             $("#enemies1").append(Leia.name + "<br />" + Leia.health + " " + Leia.baseAttack + " " + Leia.enemyAttackBack+ "<br />" );
+             $("#enemies2").append(Vader.name + "<br />" + Vader.health + " " + Vader.baseAttack + " " + Vader.enemyAttackBack+ "<br />" );
              $("#enemies3").css("visibility","hidden");
-            // $("#enemies4").append(ObiWan.name + "<br />" + ObiWan.health + " " + ObiWan.baseAttack + " " + ObiWan.enemyAttackBack + "<br />" );
+             $("#enemies4").append(ObiWan.name + "<br />" + ObiWan.health + " " + ObiWan.baseAttack + " " + ObiWan.enemyAttackBack + "<br />" );
             $("#Yoda").css("visibility", "hidden");
 
             //-----------
@@ -194,7 +196,7 @@ var swChars = {
               $(".enemies").animate({top:"-250px"},1000);
               $("#enemies2").animate({left:"150px"},1000);
               $("#enemyStats2").animate({left:"700px"},1000);
-              $("#stats").animate({left:"970px"},1000);
+              $("#stats").animate({left:"1370px"},1000);
               //-------------------------------------------------------------
             }
         });
@@ -210,9 +212,9 @@ var swChars = {
               attckPower = $("#chosen").data().baseAttack;
               console.log(hpBar);
 
-            //  $("#enemies3").append(Yoda.name + "<br />" + Yoda.health + " " + Yoda.baseAttack + " " + Yoda.enemyAttackBack+ "<br />");
-            //  $("#enemies2").append(Vader.name + "<br />" + Vader.health + " " + Vader.baseAttack + " " + Vader.enemyAttackBack+ "<br />" );
-            //  $("#enemies4").append(ObiWan.name + "<br />" + ObiWan.health + " " + ObiWan.baseAttack + " " + ObiWan.enemyAttackBack+ "<br />" );
+              $("#enemies3").append(Yoda.name + "<br />" + Yoda.health + " " + Yoda.baseAttack + " " + Yoda.enemyAttackBack+ "<br />");
+              $("#enemies2").append(Vader.name + "<br />" + Vader.health + " " + Vader.baseAttack + " " + Vader.enemyAttackBack+ "<br />" );
+              $("#enemies4").append(ObiWan.name + "<br />" + ObiWan.health + " " + ObiWan.baseAttack + " " + ObiWan.enemyAttackBack+ "<br />" );
               //-----------
               $("#chosen").css("background-image", "url('assets/images/thor.png')");
                 $("#enemies1").css("visibility","hidden");
@@ -249,7 +251,7 @@ var swChars = {
                     $("#enemies3").animate({right:"170px"},1000);
                     $("#enemyStats3").animate({left:"770px"},1000);
                     $("#enemyStats2").animate({left:"260px"},1000);
-                      $("#stats").animate({left:"970px"},1000);
+                      $("#stats").animate({left:"1370px"},1000);
                     //-------------------------------------------------------------
             }
 
@@ -297,7 +299,7 @@ var swChars = {
                   $("#enemies3").animate({right:"170px"},1000);
                   $("#enemyStats3").animate({left:"770px"},1000);
                   $("#enemyStats1").animate({left:"250px"},1000);
-                    $("#stats").animate({left:"970px"},1000);
+                    $("#stats").animate({left:"1370px"},1000);
                   //-------------------------------------------------------------
             }
           });
@@ -313,10 +315,10 @@ var swChars = {
                 hpBar = $("#chosen").data().health;
                 attckPower = $("#chosen").data().baseAttack;
 
-              //  $("#enemies1").append(Leia.name + "<br />" + Leia.health + " " + Leia.baseAttack + " " + Leia.enemyAttackBack+ "<br />" );
+                $("#enemies1").append(Leia.name + "<br />" + Leia.health + " " + Leia.baseAttack + " " + Leia.enemyAttackBack+ "<br />" );
                   $("#enemies2").css("visibility","hidden");
-              //  $("#enemies3").append(Yoda.name + "<br />" + Yoda.health + " " + Yoda.baseAttack + " " + Yoda.enemyAttackBack+ "<br />" );
-              //  $("#enemies4").append(ObiWan.name + "<br />" + ObiWan.health + " " + ObiWan.baseAttack + " " + ObiWan.enemyAttackBack+ "<br />" );
+                $("#enemies3").append(Yoda.name + "<br />" + Yoda.health + " " + Yoda.baseAttack + " " + Yoda.enemyAttackBack+ "<br />" );
+                $("#enemies4").append(ObiWan.name + "<br />" + ObiWan.health + " " + ObiWan.baseAttack + " " + ObiWan.enemyAttackBack+ "<br />" );
                 //-----------
                 $("#enemies1").css("background-image", "url('assets/images/thor.png')");
                 $("#chosen").css("background-image", "url('assets/images/ironman.png')");
@@ -352,7 +354,7 @@ var swChars = {
                           $("#enemies2").animate({right:"320px"},1000);
                           $("#enemies3").animate({right:"170px"},1000);
                           $("#enemyStats3").animate({left:"770px"},1000);
-                            $("#stats").animate({left:"970px"},1000);
+                            $("#stats").animate({left:"1370px"},1000);
                           //-------------------------------------------------------------
               }
 
@@ -401,7 +403,7 @@ var swChars = {
                           $("#enemies2").animate({right:"320px"},1000);
                           $("#enemies3").animate({right:"170px"},1000);
                           $("#enemyStats3").animate({left:"770px"},1000);
-                            $("#stats").animate({left:"970px"},1000);
+                            $("#stats").animate({left:"1370px"},1000);
                           //-------------------------------------------------------------
               }
             });
@@ -417,9 +419,9 @@ var swChars = {
                   hpBar = $("#chosen").data().health;
                   attckPower = $("#chosen").data().baseAttack;
 
-                //  $("#enemies2").append(Vader.name + "<br />" + Vader.health + " " + Vader.baseAttack + " " + Vader.enemyAttackBack+ "<br />" );
-                //  $("#enemies1").append(Leia.name + "<br />" + Leia.health + " " + Leia.baseAttack + " " + Leia.enemyAttackBack+ "<br />" );
-                //  $("#enemies3").append(Yoda.name + "<br />" + Yoda.health + " " + Yoda.baseAttack + " " + Yoda.enemyAttackBack+ "<br />" );
+                  $("#enemies2").append(Vader.name + "<br />" + Vader.health + " " + Vader.baseAttack + " " + Vader.enemyAttackBack+ "<br />" );
+                  $("#enemies1").append(Leia.name + "<br />" + Leia.health + " " + Leia.baseAttack + " " + Leia.enemyAttackBack+ "<br />" );
+                  $("#enemies3").append(Yoda.name + "<br />" + Yoda.health + " " + Yoda.baseAttack + " " + Yoda.enemyAttackBack+ "<br />" );
                     $("#enemies4").css("visibility","hidden");
                   //-----------
                   $("#enemies1").css("background-image", "url('assets/images/thor.png')");
@@ -455,7 +457,7 @@ var swChars = {
                         $("#enemies3").animate({left:"320px"},1000);
                         $("#enemyStats2").animate({left:"720px"},1000);
                         $("#enemyStats3").animate({left:"1270px"},1000);
-                          $("#stats").animate({left:"970px"},1000);
+                          $("#stats").animate({left:"1370px"},1000);
                         //-------------------------------------------------------------
                 }
 
@@ -504,7 +506,7 @@ var swChars = {
                         $("#enemies3").animate({left:"320px"},1000);
                         $("#enemyStats2").animate({left:"770px"},1000);
                         $("#enemyStats3").animate({left:"1270px"},1000);
-                          $("#stats").animate({left:"970px"},1000);
+                          $("#stats").animate({left:"1370px"},1000);
                         //-------------------------------------------------------------
                 }
               });
@@ -530,16 +532,22 @@ var swChars = {
               $("#attckYoda").css("visibility","hidden");
               $("#enemyStats3").css("visibility","hidden");
               if(lifeCount == 3){
-                alert("you winssss");
+                confirm("You Won! Play Again?");
+                if(confirm){
+                  location.reload();
+                }
               }
             }
 
-             else if(hpBar <= 0){
-              alert("you lost!");
-            }
+            else if(hpBar <= 0){
+              confirm("Oh No!You Lost! Play Again?");
+              if(confirm){
+                location.reload();}
+           }
 
             $("#stats").html($("#chosen").data().name + '<br />' + 'My HP Bar: ' + hpBar + "<br />" + "My Attack Power:" + attckPower );
             $("#enemyStats3").html(Yoda.name + "<br /> HP: " + hpBarYoda + "<br /> Base Attack: " + Yoda.baseAttack + "<br /> Counter: " + Yoda.enemyAttackBack);
+             $("#attckYodaStats").html(Yoda.name + "<br /> HP: " + hpBarYoda + "<br /> Base Attack: " + Yoda.baseAttack + "<br /> Counter: " + Yoda.enemyAttackBack);
           console.log("Yoda's HP: " + hpBarYoda);
           });
 
@@ -556,16 +564,23 @@ var swChars = {
               $("#enemies1").css("visibility","hidden");
               $("#enemyStats1").css("visibility","hidden");
               if(lifeCount == 3){
-                alert("you winssss");
+                confirm("You Won! Play Again?");
+                if(confirm){
+                  location.reload();
+                }
               }
             }
 
              else if(hpBar <= 0){
-              alert("you lost!");
+               confirm("Oh No!You Lost! Play Again?");
+               if(confirm){
+                 location.reload();}
             }
+
 
            $("#stats").html($("#chosen").data().name + '<br />' + 'My HP Bar: ' + hpBar + "<br />" + "My Attack Power:" + attckPower );
            $("#enemyStats1").html(Leia.name + "<br /> HP: " + hpBarLeia + "<br /> Base Attack: " + Leia.baseAttack + "<br /> Counter: " + Leia.enemyAttackBack);
+           $("#attckLeiaStats").html(Leia.name + "<br /> HP: " + hpBarLeia + "<br /> Base Attack: " + Leia.baseAttack + "<br /> Counter: " + Leia.enemyAttackBack);
           // document.getElementById('enemyStats1').innerHTML = Leia.name + "<br /> HP: " + hpBarLeia;
             console.log("Leia's HP: " + hpBarLeia);
           });
@@ -585,17 +600,23 @@ var swChars = {
            $("#enemies4").css("visibility","hidden");
            $("#enemyStats4").css("visibility","hidden");
            if(lifeCount == 3){
-             alert("you winssss");
+             confirm("You Won! Play Again?");
+             if(confirm){
+               location.reload();
+             }
            }
          }
 
-           else if(hpBar <= 0){
-           alert("you lost!");
-         }
+         else if(hpBar <= 0){
+           confirm("Oh No!You Lost! Play Again?");
+           if(confirm){
+             location.reload();}
+        }
 
          $("#stats").html($("#chosen").data().name + '<br />' + 'My HP Bar: ' + hpBar + "<br />" + "My Attack Power:" + attckPower );
          $("#enemyStats4").html(ObiWan.name + "<br /> HP: " + hpBarObi + "<br /> Base Attack: " + ObiWan.baseAttack + "<br /> Counter: " + ObiWan.enemyAttackBack);
          console.log("Obi's HP: " + hpBarObi);
+         $("#attckObiStats").html(ObiWan.name + "<br /> HP: " + hpBarObi + "<br /> Base Attack: " + ObiWan.baseAttack + "<br /> Counter: " + ObiWan.enemyAttackBack);
        });
 
     //-------------------------
@@ -612,21 +633,22 @@ var swChars = {
         $("#enemies2").css("visibility","hidden");
         $("#enemyStats1").css("visibility","hidden");
         if(lifeCount == 3){
-          alert("you winssss");
+          confirm("You Won! Play Again?");
+          if(confirm){
+            location.reload();
+          }
         }
       }
 
-        if(hpBar === 0){
-        alert("you lost!");
-      }
-
-
       else if(hpBar <= 0){
-      alert("you lost!");
-    }
+        confirm("Oh No!You Lost! Play Again?");
+        if(confirm){
+          location.reload();}
+     }
     $("#stats").html($("#chosen").data().name + '<br />' + 'My HP Bar: ' + hpBar + "<br />" + "My Attack Power:" + attckPower );
     $("#enemyStats2").html(Vader.name + "<br /> HP: " + hpBarVader + "<br /> Base Attack: " + Vader.baseAttack + "<br /> Counter: " + Vader.enemyAttackBack);
       console.log("Vader's HP: " + hpBarVader);
+         $("#attckVaderStats").html(Vader.name + "<br /> HP: " + hpBarVader + "<br /> Base Attack: " + Vader.baseAttack + "<br /> Counter: " + Vader.enemyAttackBack);
     });
 
  //-------------------------
