@@ -21,7 +21,7 @@
       <!-- <button onclick="playVid()" type="button">Play Video</button>
       <button onclick="pauseVid()" type="button">Pause Video</button><br> -->
 
-      <video id="myVideo" width="1400" height="770" style="border-radius:10%; position:absolute; left: 0; right: 0; top: 80px; margin: auto; visibility: hidden; z-index:999;" >
+      <video id="avengersVid" width="1400" height="770" style="border-radius:10%; position:absolute; left: 0; right: 0; top: 50px; margin: auto; visibility: hidden; z-index:999;" >
 
         <source src="assets/video/video.mp4" type="video/mp4">
 
@@ -31,7 +31,7 @@
 
 
 
-      <audio controls autoplay>
+      <audio id ="avengersThemeSong" controls autoplay>
 
 <source src="assets/audio/AvengersTheme.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
@@ -52,12 +52,7 @@ Your browser does not support the audio element.
 </div>
 
 <div id="wrapper">
-  <div id="enemyBarAcross">
-   Defenders
-  </div>
-  <div id="enemyBar">
-   Fighter
-  </div>
+
 
 
    <!------------------------------------------------------------>
@@ -95,6 +90,23 @@ Your browser does not support the audio element.
 
       </div>
 
+
+
+  </div>
+  <div id="enemyBarAcross">
+   Defenders
+  </div>
+  <div id="enemyBarThor">
+   Fighter
+  </div>
+  <div id="enemyBarHulk">
+   Fighter
+  </div>
+  <div id="enemyBarIronMan">
+   Fighter
+  </div>
+  <div id="enemyBarCapt">
+   Fighter
   </div>
     <!------------------------------------------------------------>
       <div id="chosen" style="border-radius:150%">

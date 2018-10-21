@@ -14,7 +14,10 @@ p1{
   font-size: 32px;
 }
 
-
+#avengersThemeSong{
+  position:absolute;
+  z-index: 999;
+}
 .character{
 
   margin-left: auto;
@@ -143,7 +146,7 @@ background-repeat:no-repeat;
   background-repeat:no-repeat;
   background-size:cover;
   top: 200px;
-  left: 800px;
+  left: 700px;
   text-align: center;
   font-size: 25px;
   border-radius: 70%;
@@ -240,7 +243,44 @@ margin: auto;
   z-index: 999;
 }
 
-#enemyBar{
+#enemyBarThor{
+  border-radius: 20%;
+  position: relative;
+  display: inline-block;
+  top: 300px;
+  height: 20px;
+  width: 350px;
+  background-color:red;
+    z-index: 999;
+    text-align:center;
+  visibility: hidden;
+}
+
+#enemyBarIronMan{
+  border-radius: 20%;
+  position: relative;
+  top: 300px;
+  height: 20px;
+  width: 350px;
+  background-color:red;
+    z-index: 999;
+    text-align:center;
+  visibility: hidden;
+}
+
+#enemyBarHulk{
+  border-radius: 20%;
+  position: relative;
+  top: 320px;
+  height: 20px;
+  width: 350px;
+  background-color:red;
+    z-index: 999;
+    text-align:center;
+  visibility: hidden;
+}
+
+#enemyBarCapt{
   border-radius: 20%;
   position: relative;
   top: 300px;

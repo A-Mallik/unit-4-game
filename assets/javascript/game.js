@@ -285,16 +285,16 @@ var Avengers = {
       //-------------------------
 
           $("#attckHulk").click(function(){
-              $("#enemyBar").css("visibility","visible");
+              $("#enemyBarHulk").css("visibility","visible");
               if($("#chosen").data().name == "Captain America"){
 
-                $("#enemyBar").animate({top:"550px"},300);
-                $("#enemyBar").animate({left:"950px"},300);
+                $("#enemyBarHulk").animate({top:"470px"},300);
+                $("#enemyBarHulk").animate({left:"950px"},300);
               }
 
               else{
-                $("#enemyBar").animate({top:"450px"},300);   // middle
-                $("#enemyBar").animate({left:"450px"},300);
+                $("#enemyBarHulk").animate({top:"470px"},300);   // middle
+                $("#enemyBarHulk").animate({left:"450px"},300);
               }
               hpBar = hpBar-$("#Hulk").data().enemyAttackBack;
               attckPower = attckPower+$("#chosen").data().baseAttack;
@@ -308,7 +308,7 @@ var Avengers = {
                  }, 50);
                }
               else if(hpBarHulk <= 0){
-                $("#enemyBar").css("visibility","hidden");
+                $("#enemyBarThor").css("visibility","hidden");
                 lifeCount++;
                 $("#enemies3").css("visibility","hidden");
                 $("#attckHulk").css("visibility","hidden");
@@ -331,15 +331,15 @@ var Avengers = {
 
       //-------------------------
           $("#attckThor").click(function(){
-              $("#enemyBar").css("visibility","visible");
-              $("#enemyBar").animate({top:"450px"},300);
+              $("#enemyBarThor").css("visibility","visible");
+              $("#enemyBarThor").animate({top:"490px"},300);
               hpBar = hpBar-$("#Thor").data().enemyAttackBack;
               attckPower = attckPower+$("#chosen").data().baseAttack;
                 hpBarThor = hpBarThor - attckPower;
 
               if(hpBarThor <= 0){
                 lifeCount++;
-                $("#enemyBar").css("visibility","hidden");
+                $("#enemyBarThor").css("visibility","hidden");
 
 
                     $("#attckThor").css("visibility","hidden");
@@ -369,16 +369,16 @@ var Avengers = {
 
          //-------------------------
          $("#attckCapt").click(function(){
-             $("#enemyBar").css("visibility","visible");
-             $("#enemyBar").animate({top:"450px"},300);
-             $("#enemyBar").animate({left:"950px"},300);
+             $("#enemyBarCapt").css("visibility","visible");
+             $("#enemyBarCapt").animate({top:"430px"},300);
+             $("#enemyBarCapt").animate({left:"950px"},300);
 
              hpBar = hpBar-$("#Capt").data().enemyAttackBack;
              attckPower = attckPower+$("#chosen").data().baseAttack;
                hpBarCapt = hpBarCapt - attckPower;
 
              if(hpBarCapt <= 0){
-              $("#enemyBar").css("visibility","hidden");
+              $("#enemyBarCapt").css("visibility","hidden");
                lifeCount++;
 
                   $("#attckCapt").css("visibility","hidden");
@@ -407,15 +407,15 @@ var Avengers = {
 
     //-------------------------
     $("#attckIronMan").click(function(){
-          $("#enemyBar").css("visibility","visible");
+          $("#enemyBarIronMan").css("visibility","visible");
       if($("#chosen").data().name == "Thor"){
 
-        $("#enemyBar").animate({top:"450px"},300);
+        $("#enemyBarIronMan").animate({top:"450px"},300);
       }
 
       else{
-        $("#enemyBar").animate({top:"450px"},300);   // middle
-        $("#enemyBar").animate({left:"450px"},300);
+        $("#enemyBarIronMan").animate({top:"450px"},300);   // middle
+        $("#enemyBarIronMan").animate({left:"450px"},300);
       }
 
       hpBar = hpBar-$("#IronMan").data().enemyAttackBack;
@@ -423,7 +423,7 @@ var Avengers = {
         hpBarIronMan = hpBarIronMan - attckPower;
 
       if(hpBarIronMan <= 0){
-            $("#enemyBar").css("visibility","hidden");
+            $("#enemyBarIronMan").css("visibility","hidden");
 
                  lifeCount++;
 
@@ -453,7 +453,7 @@ var Avengers = {
 
           });
 
-    var vid = document.getElementById("myVideo");
+    var vid = document.getElementById("avengersVid");
           function playVid() {
               vid.play();
           }
@@ -470,10 +470,11 @@ $("#splash").hover(function(){
 
       $("#splash").click(function(){
       vid.play();
+      $("#avengersThemeSong").fadeOut();
       setTimeout(function(){ pauseVid();
       }, 1000);
       $("#wrapper").css("visibility","visible");
-      $("#myVideo").css("visibility","visible");
+      $("#avengersVid").css("visibility","visible");
       $("#splash").css("visibility","hidden");
       $("#message").css("visibility","hidden");
       $("#vidMessage").css("visibility","visible");
@@ -481,10 +482,11 @@ $("#splash").hover(function(){
 });
 
 function pauseVid(){
-$("#myVideo").click(function(){
+$("#avengersVid").click(function(){
+  $("#avengersThemeSong").fadeIn();
   vid.pause();
   $("#message").css("visibility","visible");
-  $("#myVideo").css("display","none");
+  $("#avengersVid").css("display","none");
   $("#vidMessage").css("display","none");
   $("#chosen").css("visibility","visible");
 });
