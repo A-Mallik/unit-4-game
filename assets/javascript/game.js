@@ -1,8 +1,7 @@
 
 
 $( document ).ready(function() {
-  x.play();
-
+  
 
 
 var ThorSound = new Audio('assets/audio/Thor.mp3');
