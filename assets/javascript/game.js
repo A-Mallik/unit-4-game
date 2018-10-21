@@ -461,6 +461,16 @@ var Avengers = {
               vid.pause();
     }
 
+    var x = document.getElementById("avengersThemeSong");
+
+function playAudio() {
+    x.play();
+}
+
+function pauseAudio() {
+    x.pause();
+}
+
 
 $("#splash").hover(function(){
       $(this).css("background-image", "url('assets/images/splash2.png')");
@@ -468,9 +478,12 @@ $("#splash").hover(function(){
       $(this).css("background-image", "url('assets/images/splash1.png')");
       });
 
-      $("#splash").click(function(){
+$("#splash").click(function(){
       vid.play();
+        x.pause();
+
       $("#avengersThemeSong").fadeOut();
+
       setTimeout(function(){ pauseVid();
       }, 1000);
       $("#wrapper").css("visibility","visible");
@@ -485,6 +498,7 @@ function pauseVid(){
 $("#avengersVid").click(function(){
   $("#avengersThemeSong").fadeIn();
   vid.pause();
+  x.play();
   $("#message").css("visibility","visible");
   $("#avengersVid").css("display","none");
   $("#vidMessage").css("display","none");
