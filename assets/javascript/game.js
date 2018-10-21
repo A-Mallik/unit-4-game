@@ -29,7 +29,7 @@ x.pause();
 }
 
 
-
+x.play();
     $("p1").click(function(){
           $("p1").html(Hulk);
     }
