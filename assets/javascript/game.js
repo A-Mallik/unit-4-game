@@ -10,6 +10,24 @@ var IronManSound = new Audio('assets/audio/Iron.mp3');
 var Capt = new Audio('assets/audio/Capt.mp3');
 var lifeCount = 0; // counter for how many characters have a health of 0, at 3 it will alert that you win and ask if you want to relaod page, used in the attack___ functions towards bottom of file
 
+var vid = document.getElementById("avengersVid");  // video controls
+      function playVid() {
+          vid.play();
+      }
+      function pauseVid() {
+          vid.pause();
+}
+
+var x = document.getElementById("avengersThemeSong");  // audio controls
+
+function playAudio() {
+x.play();
+}
+
+function pauseAudio() {
+x.pause();
+}
+
 
 
     $("p1").click(function(){
@@ -457,23 +475,6 @@ var Avengers = {
 
           });
 
-    var vid = document.getElementById("avengersVid");  // video controls
-          function playVid() {
-              vid.play();
-          }
-          function pauseVid() {
-              vid.pause();
-    }
-
-    var x = document.getElementById("avengersThemeSong");  // audio controls
-
-function playAudio() {
-    x.play();
-}
-
-function pauseAudio() {
-    x.pause();
-}
 
 
 $("#splash").hover(function(){
