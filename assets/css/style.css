@@ -31,18 +31,14 @@ p1{
 
 /* ---------------------------------------------------------- */
 
-#Capt,#IronMan,#Thor,#Hulk{
+#Capt,#IronMan,#Thor,#Hulk{    /* holds the initial character objects with background images */
 
-
-  width: 320px;
+width: 320px;
 position: relative;
 display: inline-block;
-
 float:left;
 text-align: center;
-
 height: 100%;
-
 
 }
 
@@ -234,6 +230,7 @@ margin: auto;
 
 #message{
   text-align: center;
+  font-size: 14px;
 }
 #vidMessage{
   top: 100px;
@@ -253,6 +250,19 @@ margin: auto;
   width: 350px;
   background-color:red;
     z-index: 999;
+    text-align:center;
+  visibility: hidden;
+}
+
+
+#enemyBarAcross{
+
+  position: relative;
+  top: 300px;
+  height: 50px;
+  width: 100%;
+  
+
     text-align:center;
   visibility: hidden;
 }

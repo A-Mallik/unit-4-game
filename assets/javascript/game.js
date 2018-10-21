@@ -288,7 +288,7 @@ var Avengers = {
               $("#enemyBar").css("visibility","visible");
               if($("#chosen").data().name == "Captain America"){
 
-                $("#enemyBar").animate({top:"450px"},300);
+                $("#enemyBar").animate({top:"550px"},300);
                 $("#enemyBar").animate({left:"950px"},300);
               }
 
@@ -299,8 +299,15 @@ var Avengers = {
               hpBar = hpBar-$("#Hulk").data().enemyAttackBack;
               attckPower = attckPower+$("#chosen").data().baseAttack;
                hpBarHulk = hpBarHulk - attckPower;
-
-              if(hpBarHulk <= 0){
+              console.log(hpBar);
+              if(hpBar === 0 || hpBar < 0){
+                     //setTimeout(function() {}, 20 );
+              setTimeout(function(){  confirm("Oh No!You Lost! Play Again?");
+                    if(confirm){
+                      location.reload();}
+                 }, 50);
+               }
+              else if(hpBarHulk <= 0){
                 $("#enemyBar").css("visibility","hidden");
                 lifeCount++;
                 $("#enemies3").css("visibility","hidden");
@@ -314,12 +321,7 @@ var Avengers = {
                 }
               }
 
-              else if(hpBar <= 0){
-                     //setTimeout(function() {}, 20 );
-                confirm("Oh No!You Lost! Play Again?");
-                if(confirm){
-                  location.reload();}
-             }
+
 
               $("#stats").html($("#chosen").data().name + '<br />' + 'My HP Bar: ' + hpBar + "<br />" + "My Attack Power:" + attckPower );
               $("#enemyStats3").html(Hulk.name + "<br /> HP: " + hpBarHulk + "<br /> Base Attack: " + Hulk.baseAttack + "<br /> Counter: " + Hulk.enemyAttackBack);
@@ -475,6 +477,7 @@ $("#splash").hover(function(){
       $("#splash").css("visibility","hidden");
       $("#message").css("visibility","hidden");
       $("#vidMessage").css("visibility","visible");
+      $("#chosen").css("visibility","hidden");
 });
 
 function pauseVid(){
@@ -483,6 +486,7 @@ $("#myVideo").click(function(){
   $("#message").css("visibility","visible");
   $("#myVideo").css("display","none");
   $("#vidMessage").css("display","none");
+  $("#chosen").css("visibility","visible");
 });
 
 };
