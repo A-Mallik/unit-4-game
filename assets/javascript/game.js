@@ -1,4 +1,4 @@
-var ThorSound = new Audio('assets/audio/thor.mp3');
+var ThorSound = new Audio('assets/audio/Thor.mp3');
 var HulkSound = new Audio('assets/audio/Hulk.mp3');
 var IronManSound = new Audio('assets/audio/Iron.mp3');
 var Capt = new Audio('assets/audio/Capt.mp3');
