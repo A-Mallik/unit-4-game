@@ -1,4 +1,7 @@
-
+// <!-- Ashraful Mallik (Shohan)
+//
+// Just to note, I was going to put the defenders also in a seperate space and stats that show up on the characters in a seperate little div that would appear next to them (where you might see code commented out in the JS file with enemyStats#) but could
+// not finish that/have it working as i wanted to due to time. -->
 
 $( document ).ready(function() {
 
