@@ -1,6 +1,6 @@
 // <!-- Ashraful Mallik (Shohan)
 //
-// Just to note, I was going to put the defenders also in a seperate space and stats that show up on the characters in a seperate little div that would appear next to them (where you might see code commented out in the JS file with enemyStats#) but could
+// Just to note, I was going to put the defenders title on top of where the characters move to and move the one activly attacked seperately with stats that show up on the characters in a seperate little div that would appear next to them (where you might see code commented out in the JS file with enemyStats#) but could
 // not finish that/have it working as i wanted to due to time. -->
 
 $( document ).ready(function() {
@@ -11,7 +11,7 @@ var ThorSound = new Audio('assets/audio/Thor.mp3');
 var HulkSound = new Audio('assets/audio/Hulk.mp3');
 var IronManSound = new Audio('assets/audio/Iron.mp3');
 var Capt = new Audio('assets/audio/Capt.mp3');
-var lifeCount = 0; // counter for how many characters have a health of 0, at 3 it will alert that you win and ask if you want to relaod page, used in the attack___ functions towards bottom of file
+var enemiesDefeated = 0; // counter for how many characters have a health of 0, at 3 it will alert that you win and ask if you want to relaod page, used in the attack___ functions towards bottom of file
 
 var vid = document.getElementById("avengersVid");  // video controls
       function playVid() {
@@ -93,6 +93,8 @@ var Avengers = {
   // $("#Hulk").append(Hulk.name, Hulk.health, Hulk.baseAttack, Hulk.enemyAttackBack);
 
 
+
+//************Some of these lines of code look like they can be part of a function but ended up requiring specific changes depending on character because of positioning **//
       // Logic for Hulk is applied to the other characters as well.
       $("#Hulk").click(function(){
             $("#message").html("You have chosen The Incredible Hulk!");
@@ -305,7 +307,7 @@ var Avengers = {
 
           $("#attckHulk").click(function(){
               $("#enemyBarHulk").css("visibility","visible");
-              if($("#chosen").data().name == "Captain America"){
+              if($("#chosen").data().name == "Captain America"){    // to make up for some positioning conflicts with Captain America div
 
                 $("#enemyBarHulk").animate({top:"470px"},300);
                 $("#enemyBarHulk").animate({left:"950px"},300);
@@ -322,18 +324,18 @@ var Avengers = {
               console.log("Hulk HP: " + hpBarHulk);
               if(hpBar === 0 || hpBar < 0){
                      //setTimeout(function() {}, 20 );
-              setTimeout(function(){  confirm("Oh No!You Lost! Play Again?");
+              setTimeout(function(){  confirm("Oh No!You Lost! Play Again?");   // page reload if confirm is true to restart game
                     if(confirm){
                       location.reload();}
                  }, 50);
                }
               else if(hpBarHulk <= 0){
-                $("#enemyBarHulk").css("visibility","hidden");
-                lifeCount++;
+                $("#enemyBarHulk").css("visibility","hidden");              // hide enemy bar
+                enemiesDefeated++;                                                   // add to enemies defeated (if 3, you win! (three defeated))
                 $("#enemies3").css("visibility","hidden");
                 $("#attckHulk").css("visibility","hidden");
-                $("#enemyStats3").css("visibility","hidden");
-                if(lifeCount == 3){
+              //  $("#enemyStats3").css("visibility","hidden");
+                if(enemiesDefeated == 3){
                   confirm("You Won! Play Again?");
                   if(confirm){
                     location.reload();
@@ -344,7 +346,7 @@ var Avengers = {
 
 
               $("#stats").html($("#chosen").data().name + '<br />' + 'HP Bar : ' + "<span style='color:#5ff45b'>" +  hpBar + "</span>" + "<br />" + "Attack Power: " + "<span style='color:#e74747'>" + attckPower + "</span>");
-              $("#enemyStats3").html(Hulk.name + "<br /> HP: " + hpBarHulk + "<br /> Base Attack: " + Hulk.baseAttack + "<br /> Counter: " + Hulk.enemyAttackBack);
+              //$("#enemyStats3").html(Hulk.name + "<br /> HP: " + hpBarHulk + "<br /> Base Attack: " + Hulk.baseAttack + "<br /> Counter: " + Hulk.enemyAttackBack);
                $("#attckHulkStats").html(Hulk.name + "<br /> HP: " + hpBarHulk + "<br /> Base Attack: " + Hulk.baseAttack + "<br /> Counter: " + Hulk.enemyAttackBack);
 
           });
@@ -359,14 +361,14 @@ var Avengers = {
                 console.log("My HP: " + hpBar);
                 console.log("Thor HP: " + hpBarThor);
               if(hpBarThor <= 0){
-                lifeCount++;
+                enemiesDefeated++;
                 $("#enemyBarThor").css("visibility","hidden");
 
 
                     $("#attckThor").css("visibility","hidden");
                 $("#enemies1").css("visibility","hidden");
-                $("#enemyStats1").css("visibility","hidden");
-                if(lifeCount == 3){
+              //  $("#enemyStats1").css("visibility","hidden");
+                if(enemiesDefeated == 3){
                   confirm("You Won! Play Again?");
                   if(confirm){
                     location.reload();
@@ -382,7 +384,7 @@ var Avengers = {
 
 
              $("#stats").html($("#chosen").data().name + '<br />' + 'HP Bar : ' + "<span style='color:#5ff45b'>" +  hpBar + "</span>" + "<br />" + "Attack Power: " + "<span style='color:#e74747'>" + attckPower + "</span>");
-             $("#enemyStats1").html(Thor.name + "<br /> HP: " + hpBarThor + "<br /> Base Attack: " + Thor.baseAttack + "<br /> Counter: " + Thor.enemyAttackBack);
+          //   $("#enemyStats1").html(Thor.name + "<br /> HP: " + hpBarThor + "<br /> Base Attack: " + Thor.baseAttack + "<br /> Counter: " + Thor.enemyAttackBack);
              $("#attckThorStats").html(Thor.name + "<br /> HP: " + hpBarThor + "<br /> Base Attack: " + Thor.baseAttack + "<br /> Counter: " + Thor.enemyAttackBack);
             // document.getElementById('enemyStats1').innerHTML = Thor.name + "<br /> HP: " + hpBarThor;
 
@@ -401,12 +403,12 @@ var Avengers = {
                console.log("Capt HP: " + hpBarCapt);
              if(hpBarCapt <= 0){
               $("#enemyBarCapt").css("visibility","hidden");
-               lifeCount++;
+               enemiesDefeated++;
 
                   $("#attckCapt").css("visibility","hidden");
                $("#enemies4").css("visibility","hidden");
-               $("#enemyStats4").css("visibility","hidden");
-               if(lifeCount == 3){
+            //   $("#enemyStats4").css("visibility","hidden");
+               if(enemiesDefeated == 3){
                  confirm("You Won! Play Again?");
                  if(confirm){
                    location.reload();
@@ -422,8 +424,7 @@ var Avengers = {
             }
 
              $("#stats").html($("#chosen").data().name + '<br />' + 'HP Bar : ' + "<span style='color:#5ff45b'>" +  hpBar + "</span>" + "<br />" + "Attack Power: " + "<span style='color:#e74747'>" + attckPower + "</span>");
-             $("#enemyStats4").html(CaptAmerica.name + "<br /> HP: " + hpBarCapt + "<br /> Base Attack: " + CaptAmerica.baseAttack + "<br /> Counter: " + CaptAmerica.enemyAttackBack);
-
+            // $("#enemyStats4").html(CaptAmerica.name + "<br /> HP: " + hpBarCapt + "<br /> Base Attack: " + CaptAmerica.baseAttack + "<br /> Counter: " + CaptAmerica.enemyAttackBack);
              $("#attckCaptStats").html(CaptAmerica.name + "<br /> HP: " + hpBarCapt + "<br /> Base Attack: " + CaptAmerica.baseAttack + "<br /> Counter: " + CaptAmerica.enemyAttackBack);
        });
 
@@ -450,12 +451,12 @@ var Avengers = {
       if(hpBarIronMan <= 0){
             $("#enemyBarIronMan").css("visibility","hidden");
 
-                 lifeCount++;
+                 enemiesDefeated++;
 
                 $("#attckIronMan").css("visibility","hidden");
             $("#enemies2").css("visibility","hidden");
-            $("#enemyStats1").css("visibility","hidden");
-            if(lifeCount == 3){
+        //    $("#enemyStats1").css("visibility","hidden");
+            if(enemiesDefeated == 3){
               confirm("You Won! Play Again?");
               if(confirm){
                 location.reload();
@@ -469,7 +470,7 @@ var Avengers = {
                 location.reload();}
      }
     $("#stats").html($("#chosen").data().name + '<br />' + 'HP Bar : ' + "<span style='color:#5ff45b'>" +  hpBar + "</span>" + "<br />" + "Attack Power: " + "<span style='color:#e74747'>" + attckPower + "</span>");
-    $("#enemyStats2").html(IronMan.name + "<br /> HP: " + hpBarIronMan + "<br /> Base Attack: " + IronMan.baseAttack + "<br /> Counter: " + IronMan.enemyAttackBack);
+//    $("#enemyStats2").html(IronMan.name + "<br /> HP: " + hpBarIronMan + "<br /> Base Attack: " + IronMan.baseAttack + "<br /> Counter: " + IronMan.enemyAttackBack);
     $("#attckIronManStats").html(IronMan.name + "<br /> HP: " + hpBarIronMan + "<br /> Base Attack: " + IronMan.baseAttack + "<br /> Counter: " + IronMan.enemyAttackBack);
 
 

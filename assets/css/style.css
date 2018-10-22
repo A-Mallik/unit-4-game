@@ -1,7 +1,7 @@
-/* <!-- Ashraful Mallik (Shohan)
-
-// Just to note, I was going to put the defenders also in a seperate space and stats that show up on the characters in a seperate little div that would appear next to them (where you might see code commented out in the JS file with enemyStats#) but could
-not finish that/have it working as i wanted to due to time. --> */
+/* // <!-- Ashraful Mallik (Shohan)
+//
+// Just to note, I was going to put the defenders title on top of where the characters move to and move the one activly attacked seperately with stats that show up on the characters in a seperate little div that would appear next to them (where you might see code commented out in the JS file with enemyStats#) but could
+// not finish that/have it working as i wanted to due to time. --> */
 
 html,body{
   margin: 0 auto;
@@ -42,6 +42,17 @@ p1{
 #Capt,#IronMan,#Thor,#Hulk{    /* holds the initial character objects with background images */
 
 width: 320px;
+position: relative;
+display: inline-block;
+float:left;
+text-align: center;
+height: 100%;
+
+}
+
+#CaptHPVisible,#IronManHPVisible,#ThorHPVisible,#HulkHPVisible{    /* potential health bar (Work in Progress) */
+
+width: 180px;
 position: relative;
 display: inline-block;
 float:left;
