@@ -328,7 +328,7 @@ var Avengers = {
                  }, 50);
                }
               else if(hpBarHulk <= 0){
-                $("#enemyBarThor").css("visibility","hidden");
+                $("#enemyBarHulk").css("visibility","hidden");
                 lifeCount++;
                 $("#enemies3").css("visibility","hidden");
                 $("#attckHulk").css("visibility","hidden");
