@@ -119,7 +119,7 @@ var Avengers = {
              $( "#stats" ).fadeIn( "slow", function() {});  // stats displays the stats of the chosen character in larger format
              $( "#enemyStats1" ).fadeIn( "slow", function() {$("#enemyStats1").append(Thor.name + "<br /> HP: " + Thor.health + "<br /> Base Attack: " + Thor.baseAttack + "<br /> Counter: " + Thor.enemyAttackBack)});  // append character object info into divs that contain them as enemies
              $( "#enemyStats2" ).fadeIn( "slow", function() {$("#enemyStats2").append(IronMan.name + "<br /> HP: " + IronMan.health + "<br /> Base Attack: " + IronMan.baseAttack + "<br /> Counter: " + IronMan.enemyAttackBack)});
-             $( "#stats" ).fadeIn( "slow", function() {$("#stats").append( " HP: " + $("#chosen").data().health + " <br /> Base Attack: " + $("#chosen").data().baseAttack + " <br /> Counter: " + $("#chosen").data().enemyAttackBack)});
+             $( "#stats" ).fadeIn( "slow", function() {$("#stats").append( " HP: " + "<span style='color:#5ff45b'>" + $("#chosen").data().health + "</span>" + " <br /> Base Attack: " + $("#chosen").data().baseAttack + " <br /> Counter: " + $("#chosen").data().enemyAttackBack)});
              $( "#enemyStats4" ).fadeIn( "slow", function() {$("#enemyStats4").append(CaptAmerica.name + "<br /> HP: " + CaptAmerica.health + "<br /> Base Attack: " + CaptAmerica.baseAttack + "<br /> Counter: " + CaptAmerica.enemyAttackBack)});
               }, 2000 );
 //-------------------------------------------------------------
@@ -187,7 +187,7 @@ var Avengers = {
                    $("#chosen").animate({left:"-200px"},500);
                    //$( "#enemyStats1" ).fadeIn( "slow", function() {$("#enemyStats1").append(Thor.name + "<br /> HP: " + Thor.health + "<br /> Base Attack: " + Thor.baseAttack + "<br /> Counter: " + Thor.enemyAttackBack)});
                    $( "#enemyStats2" ).fadeIn( "slow", function() {$("#enemyStats2").append(IronMan.name + "<br /> HP: " + IronMan.health + "<br /> Base Attack: " + IronMan.baseAttack + "<br /> Counter: " + IronMan.enemyAttackBack)});
-                   $( "#stats" ).fadeIn( "slow", function() {$("#stats").append( " HP: " + $("#chosen").data().health + " <br /> Base Attack: " + $("#chosen").data().baseAttack + " <br /> Counter: " + $("#chosen").data().enemyAttackBack)});
+                   $( "#stats" ).fadeIn( "slow", function() {$("#stats").append(  " HP: " + "<span style='color:#5ff45b'>" + $("#chosen").data().health + "</span>" + " <br /> Base Attack: " + $("#chosen").data().baseAttack + " <br /> Counter: " + $("#chosen").data().enemyAttackBack)});
                    $( "#enemyStats3" ).fadeIn( "slow", function() {$("#enemyStats3").append(Hulk.name + "<br /> HP: " + Hulk.health + "<br /> Base Attack: " + Hulk.baseAttack + "<br /> Counter: " + Hulk.enemyAttackBack)});
                    $( "#enemyStats4" ).fadeIn( "slow", function() {$("#enemyStats4").append(CaptAmerica.name + "<br /> HP: " + CaptAmerica.health + "<br /> Base Attack: " + CaptAmerica.baseAttack + "<br /> Counter: " + CaptAmerica.enemyAttackBack)});
                   // $( "#enemyStats4" ).fadeIn( "slow", function() {$("#enemyStats4").append(CaptAmerica.name + "<br /> HP: " + CaptAmerica.health)});
@@ -235,7 +235,7 @@ var Avengers = {
                          //-------------------------------------------------------------
                                  setTimeout(function() {
                          $("#chosen").animate({left:"-200px"},500);
-                         $( "#stats" ).fadeIn( "slow", function() {$("#stats").append( " HP: " + $("#chosen").data().health + " <br /> Base Attack: " + $("#chosen").data().baseAttack + " <br /> Counter: " + $("#chosen").data().enemyAttackBack)});
+                         $( "#stats" ).fadeIn( "slow", function() {$("#stats").append(  " HP: " + "<span style='color:#5ff45b'>" + $("#chosen").data().health + "</span>" +  " <br /> Base Attack: " + $("#chosen").data().baseAttack + " <br /> Counter: " + $("#chosen").data().enemyAttackBack)});
                           $( "#enemyStats1" ).fadeIn( "slow", function() {$("#enemyStats1").append(Thor.name + "<br /> HP: " + Thor.health + "<br /> Base Attack: " + Thor.baseAttack + "<br /> Counter: " + Thor.enemyAttackBack)});
                         //$( "#enemyStats2" ).fadeIn( "slow", function() {$("#enemyStats2").append(IronMan.name + "<br /> HP: " + IronMan.health)});
                            $( "#enemyStats3" ).fadeIn( "slow", function() {$("#enemyStats3").append(Hulk.name + "<br /> HP: " + Hulk.health + "<br /> Base Attack: " + Hulk.baseAttack + "<br /> Counter: " + Hulk.enemyAttackBack)});
@@ -282,7 +282,7 @@ var Avengers = {
                    //-------------------------------------------------------------
                    setTimeout(function() {
                    $("#chosen").animate({left:"-200px"},500);
-                    $( "#stats" ).fadeIn( "slow", function() {$("#stats").append( " HP: " + $("#chosen").data().health + " <br /> Base Attack: " + $("#chosen").data().baseAttack + " <br /> Counter: " + $("#chosen").data().enemyAttackBack)});
+                    $( "#stats" ).fadeIn( "slow", function() {$("#stats").append(  " HP: " + "<span style='color:#5ff45b'>" + $("#chosen").data().health + "</span>" + " <br /> Base Attack: " + $("#chosen").data().baseAttack + " <br /> Counter: " + $("#chosen").data().enemyAttackBack)});
                     $( "#enemyStats1" ).fadeIn( "slow", function() {$("#enemyStats1").append(Thor.name + "<br /> HP: " + Thor.health + "<br /> Base Attack: " + Thor.baseAttack + "<br /> Counter: " + Thor.enemyAttackBack)});
                     $( "#enemyStats2" ).fadeIn( "slow", function() {$("#enemyStats2").append(IronMan.name + "<br /> HP: " + IronMan.health + "<br /> Base Attack: " + IronMan.baseAttack + "<br /> Counter: " + IronMan.enemyAttackBack)});
                      $( "#enemyStats3" ).fadeIn( "slow", function() {$("#enemyStats3").append(Hulk.name + "<br /> HP: " + Hulk.health + "<br /> Base Attack: " + Hulk.baseAttack + "<br /> Counter: " + Hulk.enemyAttackBack)});
@@ -343,7 +343,7 @@ var Avengers = {
 
 
 
-              $("#stats").html($("#chosen").data().name + '<br />' + 'My HP Bar: ' + hpBar + "<br />" + "My Attack Power:" + attckPower );
+              $("#stats").html($("#chosen").data().name + '<br />' + 'HP Bar : ' + "<span style='color:#5ff45b'>" +  hpBar + "</span>" + "<br />" + "Attack Power: " + "<span style='color:#e74747'>" + attckPower + "</span>");
               $("#enemyStats3").html(Hulk.name + "<br /> HP: " + hpBarHulk + "<br /> Base Attack: " + Hulk.baseAttack + "<br /> Counter: " + Hulk.enemyAttackBack);
                $("#attckHulkStats").html(Hulk.name + "<br /> HP: " + hpBarHulk + "<br /> Base Attack: " + Hulk.baseAttack + "<br /> Counter: " + Hulk.enemyAttackBack);
 
@@ -381,7 +381,7 @@ var Avengers = {
               }
 
 
-             $("#stats").html($("#chosen").data().name + '<br />' + 'My HP Bar: ' + hpBar + "<br />" + "My Attack Power:" + attckPower );
+             $("#stats").html($("#chosen").data().name + '<br />' + 'HP Bar : ' + "<span style='color:#5ff45b'>" +  hpBar + "</span>" + "<br />" + "Attack Power: " + "<span style='color:#e74747'>" + attckPower + "</span>");
              $("#enemyStats1").html(Thor.name + "<br /> HP: " + hpBarThor + "<br /> Base Attack: " + Thor.baseAttack + "<br /> Counter: " + Thor.enemyAttackBack);
              $("#attckThorStats").html(Thor.name + "<br /> HP: " + hpBarThor + "<br /> Base Attack: " + Thor.baseAttack + "<br /> Counter: " + Thor.enemyAttackBack);
             // document.getElementById('enemyStats1').innerHTML = Thor.name + "<br /> HP: " + hpBarThor;
@@ -421,7 +421,7 @@ var Avengers = {
                  location.reload();}
             }
 
-             $("#stats").html($("#chosen").data().name + '<br />' + 'My HP Bar: ' + hpBar + "<br />" + "My Attack Power:" + attckPower );
+             $("#stats").html($("#chosen").data().name + '<br />' + 'HP Bar : ' + "<span style='color:#5ff45b'>" +  hpBar + "</span>" + "<br />" + "Attack Power: " + "<span style='color:#e74747'>" + attckPower + "</span>");
              $("#enemyStats4").html(CaptAmerica.name + "<br /> HP: " + hpBarCapt + "<br /> Base Attack: " + CaptAmerica.baseAttack + "<br /> Counter: " + CaptAmerica.enemyAttackBack);
 
              $("#attckCaptStats").html(CaptAmerica.name + "<br /> HP: " + hpBarCapt + "<br /> Base Attack: " + CaptAmerica.baseAttack + "<br /> Counter: " + CaptAmerica.enemyAttackBack);
@@ -468,10 +468,9 @@ var Avengers = {
               if(confirm){
                 location.reload();}
      }
-    $("#stats").html($("#chosen").data().name + '<br />' + 'My HP Bar: ' + hpBar + "<br />" + "My Attack Power:" + attckPower );
+    $("#stats").html($("#chosen").data().name + '<br />' + 'HP Bar : ' + "<span style='color:#5ff45b'>" +  hpBar + "</span>" + "<br />" + "Attack Power: " + "<span style='color:#e74747'>" + attckPower + "</span>");
     $("#enemyStats2").html(IronMan.name + "<br /> HP: " + hpBarIronMan + "<br /> Base Attack: " + IronMan.baseAttack + "<br /> Counter: " + IronMan.enemyAttackBack);
-
-         $("#attckIronManStats").html(IronMan.name + "<br /> HP: " + hpBarIronMan + "<br /> Base Attack: " + IronMan.baseAttack + "<br /> Counter: " + IronMan.enemyAttackBack);
+    $("#attckIronManStats").html(IronMan.name + "<br /> HP: " + hpBarIronMan + "<br /> Base Attack: " + IronMan.baseAttack + "<br /> Counter: " + IronMan.enemyAttackBack);
 
 
  //-------------------------
